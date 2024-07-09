@@ -3,37 +3,68 @@ import 'package:http/http.dart' as http;
 import 'dart:convert';
 import 'package:geolocator/geolocator.dart';
 import 'package:permission_handler/permission_handler.dart';
+import 'package:camera/camera.dart';
 
-void main() {
-  runApp(MyApp());
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  final cameras = await availableCameras();
+  final firstCamera = cameras.isNotEmpty ? cameras.first : null;
+
+  runApp(MyApp(camera: firstCamera));
 }
 
 class MyApp extends StatelessWidget {
+  final CameraDescription? camera;
+
+  MyApp({required this.camera});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: PharmacyFinder(),
+      home: PharmacyFinder(camera: camera),
     );
   }
 }
 
 class PharmacyFinder extends StatefulWidget {
+  final CameraDescription? camera;
+
+  PharmacyFinder({required this.camera});
+
   @override
   _PharmacyFinderState createState() => _PharmacyFinderState();
 }
 
 class _PharmacyFinderState extends State<PharmacyFinder> {
-  final String apiKey =
-      '6b12f48de8dd9be93bf69d3b805fa3f6'; // 여기에 실제 카카오 API 키를 입력하세요.
+  final String apiKey = '6b12f48de8dd9be93bf69d3b805fa3f6'; // 여기에 실제 카카오 API 키를 입력하세요.
   List<dynamic> pharmacies = [];
   List<dynamic> hospitals = [];
   double? latitude;
   double? longitude;
+  CameraController? _cameraController;
 
   @override
   void initState() {
     super.initState();
     fetchLocation();
+    if (widget.camera != null) {
+      _initializeCamera();
+    }
+  }
+
+  Future<void> _initializeCamera() async {
+    if (widget.camera != null) {
+      _cameraController = CameraController(
+        widget.camera!,
+        ResolutionPreset.high,
+      );
+
+      try {
+        await _cameraController?.initialize();
+      } catch (e) {
+        print('Error initializing camera: $e');
+      }
+    }
   }
 
   Future<void> fetchLocation() async {
@@ -95,11 +126,37 @@ class _PharmacyFinderState extends State<PharmacyFinder> {
     }
   }
 
+  void _takePicture() async {
+    if (_cameraController != null && _cameraController!.value.isInitialized) {
+      try {
+        final image = await _cameraController?.takePicture();
+        // 사진을 찍고 나서 처리 로직 추가
+        print('Picture taken: ${image?.path}');
+      } catch (e) {
+        print('Error taking picture: $e');
+      }
+    } else {
+      print('Camera not initialized or not available.');
+    }
+  }
+
+  @override
+  void dispose() {
+    _cameraController?.dispose();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text('Wealthy - Pharmacy Finder'),
+        actions: [
+          IconButton(
+            icon: Icon(Icons.camera_alt),
+            onPressed: _takePicture,
+          ),
+        ],
       ),
       body: latitude == null || longitude == null
           ? Center(child: CircularProgressIndicator())
