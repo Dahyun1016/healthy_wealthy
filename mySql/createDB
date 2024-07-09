@@ -1,0 +1,29 @@
+// 데이터 베이스 생성
+CREATE DATABASE `wealthy` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
+
+// 테이블 생성
+CREATE TABLE `users` (
+  `user_id` int NOT NULL AUTO_INCREMENT,
+  `username` varchar(50) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  `name` varchar(100) NOT NULL,
+  `gender` enum('Male','Female','Other') NOT NULL,
+  `age` int NOT NULL,
+  `phone` varchar(15) NOT NULL,
+  PRIMARY KEY (`user_id`),
+  UNIQUE KEY `username` (`username`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+CREATE TABLE `medical_data` (
+  `product_name` varchar(255) DEFAULT NULL,
+  `company_name` varchar(255) DEFAULT NULL,
+  `product_image` text,
+  `drug_form` varchar(100) DEFAULT NULL,
+  `color_front` varchar(50) DEFAULT NULL,
+  `color_back` varchar(50) DEFAULT NULL,
+  `mark_front` varchar(100) DEFAULT NULL,
+  `mark_back` varchar(100) DEFAULT NULL,
+  `category_name` varchar(255) DEFAULT NULL,
+  `prescription_type` varchar(100) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
