@@ -52,6 +52,8 @@ class _PharmacyFinderState extends State<PharmacyFinder> {
           latitude = position.latitude;
           longitude = position.longitude;
         });
+        // 현재 위치 정보 출력
+        print('Current location: ($latitude, $longitude)');
         fetchPlaces();
       } else {
         // 권한이 거부된 경우 처리
