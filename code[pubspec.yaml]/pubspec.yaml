@@ -1,0 +1,33 @@
+name: wealthy
+description: A new Flutter project.
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.12.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_web_plugins:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  geolocator: ^9.0.1
+  http: ^0.13.4
+  permission_handler: ^11.3.1
+  camera: ^0.10.0+3
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_driver:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
+
+
+
+#VSCODE 터미널에서 'flutter pub get' 필수!!!!!
+#터미널 폴더 위치는 프로젝트 파일 위치로 변경 필수!!!!!!!
