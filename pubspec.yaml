@@ -1,28 +1,33 @@
 name: wealthy
-description: "A new Flutter project."
-publish_to: 'none' 
+description: A new Flutter project.
 
 version: 1.0.0+1
 
 environment:
-  sdk: '>=3.4.3 <4.0.0'
+  sdk: ">=2.12.0 <3.0.0"
 
 dependencies:
   flutter:
     sdk: flutter
-  http: ^0.13.6
-  geolocator: ^7.7.0
-  permission_handler: ^10.2.0
-  google_fonts: ^4.0.3
-  flutter_svg: ^0.22.0
-  form_field_validator: ^1.0.1
+  flutter_web_plugins:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  geolocator: ^9.0.1
+  http: ^0.13.4
+  permission_handler: ^11.3.1
+  camera: ^0.10.0+3
+  google_fonts: ^2.3.2  # google_fonts 패키지 추가
+  form_field_validator: ^1.1.0
   table_calendar: ^3.0.0
   cupertino_icons: ^1.0.6
+  flutter_svg: ^0.22.0
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: ^3.0.0
+  flutter_driver:
+    sdk: flutter
 
 flutter:
   uses-material-design: true
