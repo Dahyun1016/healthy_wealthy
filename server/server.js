@@ -64,6 +64,37 @@ app.post('/login', (req, res) => {
   });
 });
 
+// 생리 주기 데이터 저장
+app.post('/save-period', (req, res) => {
+  const { userId, startDate, endDate } = req.body;
+
+  const query = 'INSERT INTO periods (user_id, start_date, end_date) VALUES (?, ?, ?)';
+  db.query(query, [userId, startDate, endDate], (err, result) => {
+    if (err) {
+      console.error('생리 주기 데이터 삽입 오류:', err);
+      res.status(500).send('생리 주기 데이터 저장 중 오류가 발생했습니다.');
+      return;
+    }
+    res.status(200).send('생리 주기 데이터가 성공적으로 저장되었습니다.');
+  });
+});
+
+// 기분 데이터 저장
+app.post('/save-mood', (req, res) => {
+  const { userId, date, mood } = req.body;
+
+  const query = 'INSERT INTO moods (user_id, date, mood) VALUES (?, ?, ?)';
+  db.query(query, [userId, date, mood], (err, result) => {
+    if (err) {
+      console.error('기분 데이터 삽입 오류:', err);
+      res.status(500).send('기분 데이터 저장 중 오류가 발생했습니다.');
+      return;
+    }
+    res.status(200).send('기분 데이터가 성공적으로 저장되었습니다.');
+  });
+});
+
 app.listen(port, () => {
   console.log(`서버가 실행 중입니다: http://localhost:${port}`);
 });
+
