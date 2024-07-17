@@ -26,3 +26,21 @@ CREATE TABLE `medical_data` (
   `prescription_type` varchar(100) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
+
+//캘린더 관련 테이블생성 (기분, 생리주기 기록)
+CREATE TABLE periods (
+  id INT NOT NULL AUTO_INCREMENT,
+  user_id INT NOT NULL,
+  start_date DATE,
+  end_date DATE,
+  PRIMARY KEY (id)
+);
+
+CREATE TABLE moods (
+  id INT NOT NULL AUTO_INCREMENT,
+  user_id INT NOT NULL,
+  date DATE,
+  mood VARCHAR(50),
+  PRIMARY KEY (id)
+);
+
