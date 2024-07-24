@@ -1,24 +1,33 @@
-Wealthy/
-├── lib/
-│   ├── main.dart
-│   ├── pages/
-│   │   ├── calendar_page.dart
-│   │   ├── medicine_recognition_page.dart
-│   │   ├── home_page.dart
-│   │   ├── supplement_page.dart
-│   │   └── my_page.dart
-│   └── widgets/
-│       ├── calendar.dart
-│       ├── today_intake_section.dart
-│       ├── search_section.dart
-│       ├── color_search_section.dart
-│       ├── recommended_supplements_section.dart
-│       ├── status_section.dart
-│       ├── review_section.dart
-│       ├── user_info_section.dart
-│       └── saved_items_section.dart
-├── ios/
-│   ├── Runner.xcworkspace/
-│   └── ...
-└── .vscode/
-    └── launch.json
+lib # code 폴더
+├── main.dart                           # 앱의 진입점이며 기본적인 앱 설정 및 시작을 담당합니다.
+├── models                              # 데이터 모델을 정의하는 파일들을 포함합니다.
+│
+├── pages                               # 주요 페이지들의 UI와 기능을 담당합니다.
+│   ├── calendar_page.dart              # 캘린더 페이지의 UI와 기능을 담당합니다.
+│   ├── home_page.dart                  # 홈 페이지의 UI와 주요 기능을 담당합니다.
+│   ├── login_page.dart                 # 사용자 로그인 페이지의 UI와 기능을 담당합니다.
+│   ├── medicine_page.dart              # 의약품 목록 페이지의 UI와 기능을 담당합니다.
+│   ├── medicine_recognition_page.dart  # 의약품 인식 페이지의 UI와 기능을 담당합니다.
+│   ├── my_page.dart                    # 마이 페이지의 UI와 사용자 정보 표시 기능을 담당합니다.
+│   ├── register_page.dart              # 사용자 등록 페이지의 UI와 기능을 담당합니다.
+│   └── supplement_page.dart            # 보충제 페이지의 UI와 기능을 담당합니다.
+│
+├── services                            # 서비스 관련 기능을 담당합니다.
+│   ├── api_service.dart                # API 호출 및 데이터 통신 관련 기능을 담당합니다.
+│   └── location_service.dart           # 위치 서비스 관련 기능을 담당합니다.
+│
+└── widgets                             # 재사용 가능한 UI 위젯들을 포함합니다.
+    ├── bottom_navigation.dart          # 하단 네비게이션 바의 UI와 기능을 담당합니다.
+    ├── calendar.dart                   # 캘린더 위젯을 정의하고 관련 기능을 제공합니다.
+    ├── color_search_section.dart       # 색상 검색 섹션의 UI와 기능을 담당합니다.
+    ├── header.dart                     # 공통 헤더의 UI와 기능을 담당합니다.
+    ├── home_content.dart               # 홈 페이지에 표시될 콘텐츠를 담당합니다.
+    ├── location.dart                   # 위치 관련 UI와 기능을 제공합니다.
+    ├── nearby_hospitals_section.dart   # 근처 병원 섹션의 UI와 기능을 담당합니다.
+    ├── recommended_supplements_section.dart  # 추천 보충제 섹션의 UI와 기능을 담당합니다.
+    ├── review_section.dart             # 리뷰 섹션의 UI와 기능을 담당합니다.
+    ├── saved_items_section.dart        # 저장된 항목 섹션의 UI와 기능을 담당합니다.
+    ├── search_section.dart             # 검색 섹션의 UI와 기능을 담당합니다.
+    ├── status_section.dart             # 건강 상태 섹션의 UI와 기능을 담당합니다.
+    ├── today_intake_section.dart       # 오늘의 복용 약 섹션의 UI와 기능을 담당합니다.
+    └── user_info_section.dart          # 사용자 정보 섹션의 UI와 기능을 담당합니다.
