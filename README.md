@@ -1,74 +1,69 @@
-<h1 style="text-align: center;">한 손 안에 들어오는 건강, “Wellthy”</h1>
-
-<div style="text-align: center;">
-  <img src="logo/wealthy_wide_logo.png" alt="Wealthy Logo">
+<div align="center">
+<h1>한 손 안에 들어오는 건강, “Wellthy”</h1>
+  <div style="text-align: center;">
+  <img src="logo/wealthy_wide_logo.png" alt="Wealthy Logo" style="width: 60%; max-width: 300px;">
+</div>
+Wellthy는 여러분의 건강 관리를 손쉽게 도와주는 종합 건강 관리 어플입니다. 
+자신의 건강 상태를 기록하고, 처방약 정보를 확인하고, 주변 병원과 약국 위치를 찾아보세요. 
+여러분의 건강을 지켜드리겠습니다. 💊🏥
 </div>
 
-<div style="text-align: center;">
-  <img src="https://img.shields.io/badge/license-MIT-blue" alt="License">
-  <img src="https://img.shields.io/badge/build-passing-brightgreen" alt="Build Status">
-  <img src="https://img.shields.io/badge/version-1.0.0-orange" alt="Version">
-  <img src="https://img.shields.io/badge/Flutter-2.0-blue" alt="Flutter">
-  <img src="https://img.shields.io/badge/Dart-2.12-blue" alt="Dart">
-  <img src="https://img.shields.io/badge/Python-3.9-blue" alt="Python">
-  <img src="https://img.shields.io/badge/Flask-2.0-black" alt="Flask">
-</div>
+&nbsp;
+## 목차
+  - [개요](#개요) 
+  - [앱 설명](#앱-설명)
+  - [주요 기능](#주요-기능)
+  - [적용 기술](#적용-기술)
+  - [추진 일정](#추진-일정)
+  - [팀원](#팀원)
+  - [기대효과 및 활용 분야](#기대효과-및-활용-분야)
+  - [참고 링크](#참고-링크)
 
-<h2 style="text-align: center;">프로젝트 정보</h2>
+&nbsp;
+## 개요
+- 프로젝트 이름: Wellthy 🏥
+- 프로젝트 지속기간: 2024.04 ~ 2024.10
+- 개발 엔진 및 언어: Flutter & Dart
+- 백엔드: Flask, Node.js, Firebase
+- 멤버: 김다현 , 최소원
 
-<h3 style="text-align: center;">프로젝트명</h3>
-<p style="text-align: center;">한 손 안에 들어오는 건강, “Wellthy“</p>
+&nbsp;
+## 앱 설명
+| ![image](https://github.com/Dahyun1016/healthy_wealthy/blob/main/logo/1.jpeg) | ![image](https://github.com/Dahyun1016/healthy_wealthy/blob/main/logo/2.jpeg) | ![image](https://github.com/Dahyun1016/healthy_wealthy/blob/main/logo/3.jpeg) | ![image](https://github.com/Dahyun1016/healthy_wealthy/blob/main/logo/4.jpeg) | ![image](https://github.com/Dahyun1016/healthy_wealthy/blob/main/logo/5.jpeg) |
+|:---:|:---:|:---:|:---:|:---:|
+| 홈 화면 | 건강 상태 기록 | 병원 찾기 | 의약품 검색 | 마이페이지 |
 
-<h3 style="text-align: center;">주제영역</h3>
-<ul style="display: inline-block; text-align: left;">
-  <li>생활</li>
-  <li>의료</li>
-</ul>
+Wellthy는 사용자가 건강 상태를 체계적으로 점검하고 필요한 조치를 즉각적으로 취할 수 있도록 도와줍니다.<br>
+- **건강 상태 기록**: 오늘의 기분을 기록하고, 건강 상태를 체크할 수 있습니다. 📅<br>
+- **의약품 정보 확인**: 약품명을 입력하거나 카메라로 약 사진을 찍어 해당 약물의 정보를 검색할 수 있습니다. 💊<br>
+- **주변 병원 및 약국 정보**: 사용자의 현재 위치를 기반으로 주변 약국과 병원의 위치 및 영업시간을 확인할 수 있습니다. 🏥<br>
+- **사용자 리뷰**: 섭취 중인 영양제에 대한 다른 사용자의 리뷰를 참고할 수 있습니다. 🌟
 
-<h3 style="text-align: center;">기술분야</h3>
-<ul style="display: inline-block; text-align: left;">
-  <li>SW</li>
-  <li>AI</li>
-</ul>
+&nbsp;
+## 주요 기능
+- **로그인/회원 가입**: 사용자가 개인 정보를 입력하여 계정을 생성하고 로그인하여 어플을 사용할 수 있습니다.
+- **의약품 검색**: 약품명을 입력하거나 카메라로 약 사진을 찍으면 해당 약물의 정보를 검색할 수 있습니다.
+- **마이페이지**: 사용자가 자신의 건강 상태를 기록하고 섭취 중인 영양제의 복용 현황을 확인할 수 있습니다.
+- **캘린더**: 사용자가 오늘의 기분을 아이콘으로 표시할 수 있습니다.
+- **약국 및 병원 정보**: 사용자의 현재 위치를 기반으로 주변 약국과 병원의 위치 및 영업시간을 확인할 수 있습니다.
 
-<h3 style="text-align: center;">성과 목표</h3>
-<ul style="display: inline-block; text-align: left;">
-  <li>앱 등록</li>
-  <li>프로그램 등록</li>
-  <li>실용화</li>
-  <li>공모전 한이음 엑스포 한국전자전 등 기타</li>
-</ul>
+&nbsp;
+## 주요 기능
+- **로그인/회원 가입**: 사용자가 개인 정보를 입력하여 계정을 생성하고 로그인하여 어플을 사용할 수 있음.
+- **의약품 검색**: 약품명을 입력하거나 카메라로 약 사진을 찍으면 해당 약물의 정보를 검색할 수 있음.
+- **마이페이지**: 사용자가 자신의 건강 상태를 기록하고 섭취 중인 영양제의 복용 현황을 확인할 수 있음.
+- **캘린더**: 사용자가 오늘의 기분을 아이콘으로 표시할 수 있음.
+- **약국 및 병원 정보**: 사용자의 현재 위치를 기반으로 주변 약국과 병원의 위치 및 영업시간을 확인할 수 있음.
 
-<h3 style="text-align: center;">수행 예상 기간</h3>
-<p style="text-align: center;">2024. 04. 30. ~ 2024. 10. 07</p>
+&nbsp;
+## 적용 기술
+- **프론트**: Dart, Flutter
+- **백엔드**: Flask, Python, Node.js, Firebase
+- **DB**: MySQL, SQLite
+- **AI**: OpenCV
+- **IDE**: VS Code, Google Colab
 
-<h2 style="text-align: center;">프로젝트 소개 및 제안 배경</h2>
-
-<p style="text-align: center;">최근 건강 관리의 중요성이 드러나며 이를 실천하는 이들이 급증하고 있다. 건강 관리는 이제 단순한 생존의 문제가 아니라 자기 관리의 필수 요소로 자리 잡고 있다. 이러한 변화에 발맞춰 우리는 종합 건강 관리 어플을 계획했다. 이 어플은 사용자가 건강 상태를 체계적으로 점검하고 필요한 조치를 즉각적으로 취할 수 있도록 솔루션을 제공한다.</p>
-
-<p style="text-align: center;">이 프로젝트의 어플을 통해 자신의 기분 상태를 기록하고 처방받은 약물에 대한 정보를 확인하며 주변 병원 위치를 파악하고 섭취 중인 영양제에 대한 다른 사용자의 리뷰를 참고하는 등 다양한 건강 관련 정보를 손쉽게 얻을 수 있다.</p>
-
-<h2 style="text-align: center;">주요 기능</h2>
-
-<ul style="display: inline-block; text-align: left;">
-  <li><b>로그인/회원 가입:</b> 사용자가 개인 정보를 입력하여 계정을 생성하고 로그인하여 어플을 사용할 수 있음.</li>
-  <li><b>의약품 검색:</b> 약품명을 입력하거나 카메라로 약 사진을 찍으면 해당 약물의 정보를 검색할 수 있음.</li>
-  <li><b>마이페이지:</b> 사용자가 자신의 건강 상태를 기록하고 섭취 중인 영양제의 복용 현황을 확인할 수 있음.</li>
-  <li><b>캘린더:</b> 사용자가 오늘의 기분을 아이콘으로 표시할 수 있음.</li>
-  <li><b>약국 및 병원 정보:</b> 사용자의 현재 위치를 기반으로 주변 약국과 병원의 위치 및 영업시간을 확인할 수 있음.</li>
-</ul>
-
-<h2 style="text-align: center;">적용 기술</h2>
-
-<ul style="display: inline-block; text-align: left;">
-  <li><b>프론트:</b> Dart, Flutter</li>
-  <li><b>백엔드:</b> Flask, Python</li>
-  <li><b>DB:</b> MySQL, SQLite</li>
-  <li><b>AI:</b> Open CV</li>
-  <li><b>IDE:</b> Vs Code, Google Colab</li>
-</ul>
-
-
+&nbsp;
 ## 추진 일정
 
 | 구분   | 추진 내용                   | 추진 일정 | 4월 | 5월 | 6월 | 7월 | 8월 | 9월 | 10월 | 11월 |
@@ -83,20 +78,24 @@
 | 종료   | 최종 점검 및 발표 계획        |           |     |     |     |     |     | 🟢  | 🟢  |      |
 | 오프라인 | 미팅 계획                   |           | 🟢  | 🟢  | 🟢  | 🟢  | 🟢  | 🟢  | 🟢  | 🟢  |
 
+&nbsp;
+
 ## 팀원
 
 - ![Dahyun1016](https://img.shields.io/badge/GitHub-Dahyun1016-black)
 - ![thdnjs0730](https://img.shields.io/badge/GitHub-thdnjs0730-black)
 
+&nbsp;
 
 ## 기대효과 및 활용 분야
-
-### 기대효과
+## 기대효과
 - 사용자 건강 관리의 편리성 증대
 - 의약품 정보 접근성 향상
 - 종합적인 건강 관리 지원
 - 의료 서비스 접근성 개선
 - 사용자 만족도 및 참여도 증가
+
+&nbsp;
 
 ### 활용 분야
 - 의료 기관 및 약국
@@ -104,9 +103,17 @@
 - 공공 보건 기관
 - 건강 관련 연구 및 개발
 
+&nbsp;
+
 ## 참고 링크
 - https://educoder.tistory.com/entry/Flutter-%EA%B4%80%EB%A0%A8-%EB%A7%81%ED%81%AC-%EB%AA%A8%EC%9D%8C-%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC-%EA%B4%80%EB%A0%A8
 - 알약 API https://nedrug.mfds.go.kr/pbp/CCBGA01/getItem?totalPages=4&limit=10&page=2&&openDataInfoSeq=11
-- Flutter 관련 링크 모음 https://educoder.tistory.com/entry/Flutter-%EA%B4%80%EB%A0%A8-%EB%A7%81%ED%81%AC-%EB%AA%A8%EC%9D%8C-%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC-%EA%B4%80%EB%A0%A8
+- Flutter 관련 링크 모음 https://educoder.tistory.com/entry/
+
+&nbsp;
 
 ---
+
+&nbsp;
+
+
