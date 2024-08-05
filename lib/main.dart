@@ -9,7 +9,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     const String apiKey =
-        '6b12f48de8dd9be93bf69d3b805fa3f6'; // 여기에 실제 카카오 API 키를 입력하세요.
+        '6b12f48de8dd9be93bf69d3b805fa3f6'; // 여기에 실제 카카오 API 키를 입력
 
     return MaterialApp(
       title: 'Flutter Demo',
