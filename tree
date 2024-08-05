@@ -10,6 +10,7 @@ lib # code 폴더
 │   ├── medicine_recognition_page.dart  # 의약품 인식 페이지의 UI와 기능을 담당합니다.
 │   ├── my_page.dart                    # 마이 페이지의 UI와 사용자 정보 표시 기능을 담당합니다.
 │   ├── register_page.dart              # 사용자 등록 페이지의 UI와 기능을 담당합니다.
+│   ├── search_page.dart                # 사용자 복용 약물 추가 시, 약물 검색을 담당합니다.
 │   └── supplement_page.dart            # 보충제 페이지의 UI와 기능을 담당합니다.
 │
 ├── services                            # 서비스 관련 기능을 담당합니다.
