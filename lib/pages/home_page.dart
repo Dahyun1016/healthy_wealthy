@@ -8,9 +8,10 @@ import 'calendar_page.dart';
 import 'medicine_page.dart';
 
 class HomePage extends StatefulWidget {
-  final String apiKey; // Add this line
+  final String userId; // 사용자 ID 추가
+  final String apiKey;
 
-  HomePage({required this.apiKey}); // Update the constructor
+  HomePage({required this.userId, required this.apiKey}); // 사용자 ID 추가
 
   @override
   _HomePageState createState() => _HomePageState();
@@ -19,17 +20,17 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   int _selectedIndex = 2;
 
-  late List<Widget> _widgetOptions; // Define as late
+  late List<Widget> _widgetOptions;
 
   @override
   void initState() {
     super.initState();
     _widgetOptions = <Widget>[
-      CalendarPage(), // 캘린더 페이지
-      NearbyHospitalsSection(apiKey: widget.apiKey), // 병원 찾기 페이지
-      HomeContent(apiKey: widget.apiKey), // 홈 페이지
-      MedicinePage(), // 의약품 페이지
-      Text('마이페이지'), // 마이페이지
+      CalendarPage(userId: widget.userId), // 사용자 ID 전달
+      NearbyHospitalsSection(apiKey: widget.apiKey),
+      HomeContent(userId: widget.userId, apiKey: widget.apiKey), // 사용자 ID 전달
+      MedicinePage(),
+      Text('마이페이지'),
     ];
   }
 
@@ -45,7 +46,7 @@ class _HomePageState extends State<HomePage> {
       backgroundColor: Colors.white,
       body: Column(
         children: [
-          CommonHeader(), // 공통 헤더 사용
+          CommonHeader(),
           Expanded(
             child: Center(
               child: _widgetOptions.elementAt(_selectedIndex),
@@ -62,9 +63,10 @@ class _HomePageState extends State<HomePage> {
 }
 
 class HomeContent extends StatelessWidget {
+  final String userId; // 사용자 ID 추가
   final String apiKey;
 
-  HomeContent({required this.apiKey});
+  HomeContent({required this.userId, required this.apiKey}); // 사용자 ID 추가
 
   @override
   Widget build(BuildContext context) {
@@ -78,7 +80,7 @@ class HomeContent extends StatelessWidget {
               style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
             ),
           ),
-          StatusSection(), // 건강 상태 섹션 위젯
+          StatusSection(),
           Padding(
             padding: const EdgeInsets.all(16.0),
             child: Text(
@@ -86,7 +88,7 @@ class HomeContent extends StatelessWidget {
               style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
             ),
           ),
-          TodayIntakeSection(), // 오늘의 복용 약 섹션 위젯
+          TodayIntakeSection(userId: userId), // 사용자 ID 전달
           Padding(
             padding: const EdgeInsets.all(16.0),
             child: Text(
@@ -94,7 +96,7 @@ class HomeContent extends StatelessWidget {
               style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
             ),
           ),
-          NearbyHospitalsSection(apiKey: apiKey), // 근처 병원 섹션 위젯
+          NearbyHospitalsSection(apiKey: apiKey),
         ],
       ),
     );

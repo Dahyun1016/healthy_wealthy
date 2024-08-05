@@ -47,7 +47,10 @@ class _RegisterPageState extends State<RegisterPage> {
           );
           Navigator.pushReplacement(
             context,
-            MaterialPageRoute(builder: (context) => LoginPage()),
+            MaterialPageRoute(
+                builder: (context) => LoginPage(
+                      apiKey: '',
+                    )),
           );
         } else {
           ScaffoldMessenger.of(context).showSnackBar(

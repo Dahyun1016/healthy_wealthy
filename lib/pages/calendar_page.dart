@@ -3,6 +3,10 @@ import 'package:table_calendar/table_calendar.dart';
 import '../widgets/today_intake_section.dart'; // TodayIntakeSection 파일을 import
 
 class CalendarPage extends StatefulWidget {
+  final String userId; // 사용자 ID 추가
+
+  CalendarPage({required this.userId}); // 사용자 ID 추가
+
   @override
   _CalendarPageState createState() => _CalendarPageState();
 }
@@ -57,7 +61,7 @@ class _CalendarPageState extends State<CalendarPage> {
               },
             ),
           ),
-          TodayIntakeSection(), // 오늘의 복용 약 섹션 추가
+          TodayIntakeSection(userId: widget.userId), // 사용자 ID 전달
         ],
       ),
     );
