@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'pages/home_page.dart';
 import 'pages/login_page.dart';
 
 void main() {
@@ -9,7 +8,8 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    const String apiKey = '6b12f48de8dd9be93bf69d3b805fa3f6'; // 여기에 실제 카카오 API 키를 입력하세요.
+    const String apiKey =
+        '6b12f48de8dd9be93bf69d3b805fa3f6'; // 여기에 실제 카카오 API 키를 입력하세요.
 
     return MaterialApp(
       title: 'Flutter Demo',
@@ -35,7 +35,9 @@ class MyApp extends StatelessWidget {
           unselectedItemColor: Colors.grey,
         ),
       ),
-      home: LoginPage(),
+      home: LoginPage(
+        apiKey: apiKey, // 실제 API 키 전달
+      ),
     );
   }
 }
