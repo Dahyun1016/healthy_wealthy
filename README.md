@@ -3,7 +3,7 @@
   <div style="text-align: center;">
   <img src="logo/wealthy_wide_logo.png" alt="Wealthy Logo" style="width: 60%; max-width: 300px;">
 </div>
-Wellthy는 여러분의 건강 관리를 손쉽게 도와주는 종합 건강 관리 어플입니다. <br>
+Wealthy는 여러분의 건강 관리를 손쉽게 도와주는 종합 건강 관리 어플입니다. <br>
 자신의 건강 상태를 기록하고, 처방약 정보를 확인하고, 주변 병원과 약국 위치를 찾아보세요.  <br>
 여러분의 건강을 지켜드리겠습니다. 💊🏥
 </div>
