@@ -6,6 +6,7 @@ import '../widgets/today_intake_section.dart';
 import '../widgets/nearby_hospitals_section.dart';
 import 'calendar_page.dart';
 import 'medicine_page.dart';
+import 'my_page.dart';
 
 class HomePage extends StatefulWidget {
   final String userId; // 사용자 ID 추가
@@ -30,7 +31,7 @@ class _HomePageState extends State<HomePage> {
       NearbyHospitalsSection(apiKey: widget.apiKey),
       HomeContent(userId: widget.userId, apiKey: widget.apiKey), // 사용자 ID 전달
       MedicinePage(),
-      Text('마이페이지'),
+      MyPage(userId: widget.userId),
     ];
   }
 
