@@ -4,6 +4,7 @@ lib # code 폴더
 │
 ├── pages                               # 주요 페이지들의 UI와 기능을 담당합니다.
 │   ├── calendar_page.dart              # 캘린더 페이지의 UI와 기능을 담당합니다.
+│   ├── edit_user_info_page.dart        # 유저 정보 수정 기능을 담당합니다.
 │   ├── home_page.dart                  # 홈 페이지의 UI와 주요 기능을 담당합니다.
 │   ├── login_page.dart                 # 사용자 로그인 페이지의 UI와 기능을 담당합니다.
 │   ├── medicine_page.dart              # 의약품 목록 페이지의 UI와 기능을 담당합니다.
