@@ -131,3 +131,23 @@ app.delete('/user/medications', (req, res) => {
 app.listen(port, () => {
   console.log(`서버가 실행 중입니다: http://localhost:${port}`);
 });
+
+// 사용자 정보 가져오기 엔드포인트
+app.get('/user/info', (req, res) => {
+  const userId = req.query.userId;
+
+  const query = 'SELECT name, gender, age FROM users WHERE id = ?';
+  db.query(query, [userId], (err, results) => {
+    if (err) {
+      console.error('사용자 정보 가져오기 오류:', err);
+      res.status(500).send('사용자 정보 가져오기 중 오류가 발생했습니다.');
+      return;
+    }
+
+    if (results.length > 0) {
+      res.json(results[0]);
+    } else {
+      res.status(404).send('사용자를 찾을 수 없습니다.');
+    }
+  });
+});
