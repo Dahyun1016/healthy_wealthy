@@ -29,7 +29,7 @@ app.post('/login', (req, res) => {
   const { username, password } = req.body;
   console.log('로그인 시도:', username, password);
 
-  const query = 'SELECT id FROM users WHERE id = ? AND password = ?';
+  const query = 'SELECT username FROM users WHERE username = ? AND password = ?';
   db.query(query, [username, password], (err, results) => {
     if (err) {
       console.error('로그인 오류:', err);
@@ -136,8 +136,8 @@ app.listen(port, () => {
 app.get('/user/info', (req, res) => {
   const userId = req.query.userId;
 
-  const query = 'SELECT name, gender, age FROM users WHERE id = ?';
-  db.query(query, [userId], (err, results) => {
+  const query = 'SELECT username FROM users WHERE username = ? AND password = ?';
+  db.query(query, [username], (err, results) => {
     if (err) {
       console.error('사용자 정보 가져오기 오류:', err);
       res.status(500).send('사용자 정보 가져오기 중 오류가 발생했습니다.');
