@@ -26,11 +26,11 @@ db.connect((err) => {
 
 // 로그인 엔드포인트
 app.post('/login', (req, res) => {
-  const { username, password } = req.body;
-  console.log('로그인 시도:', username, password);
+  const { userId, password } = req.body; // 'username'을 'userId'로 대체
+  console.log('로그인 시도:', userId, password);
 
-  const query = 'SELECT username FROM users WHERE username = ? AND password = ?';
-  db.query(query, [username, password], (err, results) => {
+  const query = 'SELECT id FROM users WHERE id = ? AND password = ?'; // 'username'을 'id'로 대체
+  db.query(query, [userId, password], (err, results) => {
     if (err) {
       console.error('로그인 오류:', err);
       res.status(500).send('로그인 중 오류가 발생했습니다.');
@@ -38,18 +38,19 @@ app.post('/login', (req, res) => {
     }
 
     if (results.length > 0) {
-      res.status(200).json({ userId: results[0].id });
+      res.status(200).json({ userId: results[0].id }); // 로그인 성공 시 사용자 ID 반환
     } else {
       res.status(401).send('로그인에 실패했습니다. 다시 시도해 주세요.');
     }
   });
 });
 
+
 app.post('/register', (req, res) => {
-  const { id, password, name, gender, age, phone } = req.body;
+  const { userId, password, name, gender, age, phone } = req.body; // Changed 'id' to 'userId'
 
   const query = 'INSERT INTO users (id, password, name, gender, age, phone) VALUES (?, ?, ?, ?, ?, ?)';
-  db.query(query, [id, password, name, gender, age, phone], (err, result) => {
+  db.query(query, [userId, password, name, gender, age, phone], (err, result) => {
     if (err) {
       console.error('데이터 삽입 오류:', err);
       res.status(500).send('회원가입 중 오류가 발생했습니다.');
@@ -134,10 +135,10 @@ app.listen(port, () => {
 
 // 사용자 정보 가져오기 엔드포인트
 app.get('/user/info', (req, res) => {
-  const userId = req.query.userId;
+  const { userId } = req.query;
 
-  const query = 'SELECT username FROM users WHERE username = ? AND password = ?';
-  db.query(query, [username], (err, results) => {
+  const query = 'SELECT * FROM users WHERE id = ?'; // 'user id' -> '*' 또는 올바른 컬럼 이름으로 수정
+  db.query(query, [userId], (err, results) => {
     if (err) {
       console.error('사용자 정보 가져오기 오류:', err);
       res.status(500).send('사용자 정보 가져오기 중 오류가 발생했습니다.');
