@@ -19,7 +19,6 @@ dependencies:
   form_field_validator: ^1.0.1
   table_calendar: ^3.0.0
   cupertino_icons: ^1.0.6
-  image_picker: ^0.8.4+4
 
 dev_dependencies:
   flutter_test:
